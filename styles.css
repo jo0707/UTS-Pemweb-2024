@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+html {
+    font-family: "Inter", sans-serif;
+    color: #111;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-image: url("background.png");
+    background-position: center center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: -1;
+}
+
+.hero-title {
+    font-size: 5rem;
+}
+
+.backdrop-blur-sm {
+    backdrop-filter: blur(4px);
+}
+
+.profile-image {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.w-10 {
+    width: 20%;
+}
+
+.w-80 {
+    width: 80%;
+}
+
+.left-aside {
+    flex-basis: 18%;
+}
+
+.main {
+    flex-basis: 50%;
+}
+
+.right-aside {
+    flex-basis: 18%;
+}
+
+.text-justify {
+    text-align: justify;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table th,
+table td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+tr:nth-child(odd) {
+    background-color: #3e414a;
+}
+
+tr:nth-child(even) {
+    background-color: #2f2e37;
+}
+
+tr:hover {
+    background-color: #323232;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .hero-title {
+        font-size: 3rem;
+    }
+
+    .left-aside {
+        flex-basis: 25%;
+    }
+
+    .main {
+        flex-basis: 65%;
+    }
+
+    .right-aside {
+        flex-basis: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .left-aside {
+        flex-basis: 100%;
+    }
+
+    .main {
+        flex-basis: 100%;
+    }
+
+    .right-aside {
+        flex-basis: 100%;
+    }
+}
