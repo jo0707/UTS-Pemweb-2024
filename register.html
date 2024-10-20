@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html data-bs-theme="dark">
+<html data-bs-theme="dark" class="h-event">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -33,12 +33,13 @@
             }
         </style>
     </head>
-    <body>
+    <body class="h-event">
         <header class="p-5 text-center bg-image d-flex justify-content-center align-items-center">
             <div class="mask">
                 <div class="d-flex justify-content-center align-items-center h-100">
                     <div class="text-white">
-                        <h1 class="mb-3">Concert Ticket Registration</h1>
+                        <h1 class="mb-3 p-name">Concert Ticket Registration</h1>
+                        <p class="p-description">Register for the Jacob Collier concert and secure your seat!</p>
                     </div>
                 </div>
             </div>
@@ -49,35 +50,74 @@
         >
             <main class="border rounded shadow-sm w-80 bg-dark bg-opacity-75 backdrop-blur-sm main">
                 <section class="border-bottom p-4" id="registration">
-                    <h2>Concert Ticket Registration Form</h2>
-                    <form action="confirmation.html" method="GET">
+                    <h2 class="p-name">Concert Ticket Registration Form</h2>
+                    <form action="confirmation.html" method="GET" class="h-card">
                         <div class="mb-3">
                             <label for="name" class="form-label">Name</label>
-                            <input type="text" id="name" name="name" class="form-control" required />
+                            <input
+                                type="text"
+                                id="name"
+                                name="name"
+                                class="form-control p-name"
+                                placeholder="Enter your full name"
+                                required
+                            />
                         </div>
                         <div class="mb-3">
                             <label for="email" class="form-label">Email</label>
-                            <input type="email" id="email" name="email" class="form-control" required />
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                class="form-control u-email"
+                                placeholder="Enter your email"
+                                required
+                            />
                         </div>
                         <div class="mb-3">
                             <label for="date" class="form-label">Concert Date</label>
-                            <input type="date" id="date" name="date" class="form-control" required />
+                            <input
+                                type="date"
+                                id="date"
+                                name="date"
+                                class="form-control dt-start"
+                                required
+                            />
                         </div>
                         <div class="mb-3">
                             <label class="form-label">Ticket Type</label>
                             <div>
-                                <input type="radio" id="vip" name="ticket_type" value="VIP" required />
+                                <input
+                                    type="radio"
+                                    id="vip"
+                                    name="ticket_type"
+                                    value="VIP"
+                                    class="ticket-type"
+                                    required
+                                />
                                 <label for="vip" class="form-label">VIP</label>
                             </div>
                             <div>
-                                <input type="radio" id="regular" name="ticket_type" value="Regular" required />
+                                <input
+                                    type="radio"
+                                    id="regular"
+                                    name="ticket_type"
+                                    value="Regular"
+                                    class="ticket-type"
+                                    required
+                                />
                                 <label for="regular" class="form-label">Regular</label>
                             </div>
                         </div>
                         <div class="mb-3">
                             <label class="form-label">Newsletter Subscription</label>
                             <div>
-                                <input type="checkbox" id="newsletter" name="newsletter" />
+                                <input
+                                    type="checkbox"
+                                    id="newsletter"
+                                    name="newsletter"
+                                    class="p-newsletter"
+                                />
                                 <label for="newsletter" class="form-label">Subscribe to newsletter</label>
                             </div>
                         </div>
@@ -94,10 +134,10 @@
         </div>
 
         <footer>
-            <div class="container text-center p-4 d-flex flex-column gap-1">
-                <p>&copy; 2021 Jacob Collier. All rights reserved.</p>
-                <p>Website made by Joshua Sinaga for midterm exam</p>
-                <p>Pemrograman Web RA ~ Muhammad Habib Algifari, S.Kom., M.T.I.</p>
+            <div class="container text-center p-4 d-flex flex-column gap-1 h-card">
+                <p class="p-note">&copy; 2021 Jacob Collier. All rights reserved.</p>
+                <p class="p-note">Website made by Joshua Sinaga for midterm exam</p>
+                <p class="p-note">Pemrograman Web RA ~ Muhammad Habib Algifari, S.Kom., M.T.I.</p>
             </div>
         </footer>
 
